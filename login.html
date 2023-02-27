@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="login.css">
+    <title>Register and Login</title>
+</head>
+<body>
+    <div class="MyToDo">
+        <h1> My To-Do List! </h1>
+        <button class="register" id="register" onclick="registerPopup()"> REGISTER </button>
+        <button class="login" id="login" onclick="loginPopup()"> LOGIN </button>
+
+    </div>
+
+
+    <div id="Modal1" class="register1">
+        <form id="registerForm" class="rForm" onsubmit="return formValidation(event)">
+            <h1> REGISTER </h1>
+            <div class="contents">
+                <div class="E1">
+                    <input type="email" placeholder="EMAIL" name="email" id="email" onkeypress="validateEmail()" >
+                    <span id="error1"></span>
+                </div>
+
+                <div class="E2">
+                    <input type="text" placeholder="USERNAME"  name="username" id="name" onkeypress="validatename()">
+                    <span id="error2"></span>
+                </div>
+
+                <div class="E3">
+                    <input type="password" placeholder="PASSWORD" name="password" id="password" onkeypress="validatePassword()">
+                    <span id="error3"></span>
+                </div>
+                <button type="submit" id="regBtn" > SUBMIT </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="registeredMessage">
+        <h1 class="header1">You are now registered! </h1>
+            <h1 class="header2" >Login!</h1>
+            <span id="close">&times;</span>
+    </div>
+
+    <div id="Modal2" class="login1">
+        <form id="loginForm" class="lForm" onsubmit="return login(event)">
+            <h1>LOGIN</h1>
+            <div class="loginEmail">
+            <input type="email" placeholder="Email" id="Email1" >
+        </div>
+        <div class="loginPassword">
+            <input type="password" placeholder="Password" id="password1">
+        </div>
+        <button class="loginSubmit" >LOGIN</button>
+        </form>
+    </div>
+
+
+
+
+
+  <script src="login.js"></script>  
+</body>
+</html>
